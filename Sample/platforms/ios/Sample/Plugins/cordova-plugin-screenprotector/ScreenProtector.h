@@ -27,5 +27,6 @@ static inline void PRINT(NSString *format, ...)  {
 @interface ScreenProtector : CDVPlugin
 + (ScreenProtector*) getInstance;
 + (BOOL) isOSVersion:(int) version;
+- (UIView*) protect;
 @end
 

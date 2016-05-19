@@ -24,7 +24,7 @@ static ScreenProtector *_protector = nil;
     _protector = self;
 }
 
-- (void) protect{
+- (UIView*) protect{
     UIView *maskView = nil;
     if([ScreenProtector isOSVersion:8]){
         // iOS 8 and above
@@ -38,6 +38,7 @@ static ScreenProtector *_protector = nil;
     }
     [maskView setTag:VIEW_TAG];
     [[self webView] addSubview:maskView];
+    return maskView;
 }
 
 -(void) onActive:(UIApplication *)application{

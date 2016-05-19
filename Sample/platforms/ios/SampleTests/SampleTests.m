@@ -36,6 +36,12 @@
 
 - (void)testOSVersion{
     XCTAssertTrue([ScreenProtector isOSVersion:8]);
+    XCTAssertFalse([ScreenProtector isOSVersion:99999]);
+}
+
+- (void)testOthers{
+    XCTAssertTrue([[[ScreenProtector getInstance] protect] isKindOfClass:[UIVisualEffectView class]]);
+    [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:@"http://mihui.net"]];
 }
 
 - (void)testPerformanceExample {
