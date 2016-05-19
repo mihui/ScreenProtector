@@ -40,6 +40,8 @@
 
 - (void)testOthers{
     XCTAssertTrue([[[ScreenProtector getInstance] protect] isKindOfClass:[UIVisualEffectView class]]);
+    [[ScreenProtector getInstance] setBgColor:[UIColor blackColor]];
+    XCTAssertTrue([[[ScreenProtector getInstance] protect] isKindOfClass:[UIView class]]);
     [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:@"http://mihui.net"]];
 }
 

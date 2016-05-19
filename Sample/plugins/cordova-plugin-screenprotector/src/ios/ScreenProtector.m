@@ -10,6 +10,7 @@
 
 @implementation ScreenProtector
 
+@synthesize bgColor = _bgColor;
 static ScreenProtector *_protector = nil;
 
 - (void)pluginInitialize{
@@ -22,22 +23,25 @@ static ScreenProtector *_protector = nil;
                                                  name:UIApplicationWillResignActiveNotification
                                                object:nil];
     _protector = self;
+    _bgColor = nil;
 }
 
-- (void) protect{
+- (UIView*) protect{
     UIView *maskView = nil;
-    if([ScreenProtector isOSVersion:8]){
+    if([ScreenProtector isOSVersion:8] && [self bgColor] == nil){
         // iOS 8 and above
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         maskView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         maskView.frame = [[self webView] frame];
     }
     else{
+        _bgColor = [UIColor colorWithRed:0.161 green:0.584 blue:0.980 alpha:1.00];
         maskView = [[UIView alloc] initWithFrame: [[self webView] frame]];
-        [maskView setBackgroundColor:[UIColor colorWithRed:0.161 green:0.584 blue:0.980 alpha:1.00]];
+        [maskView setBackgroundColor:_bgColor];
     }
     [maskView setTag:VIEW_TAG];
     [[self webView] addSubview:maskView];
+    return maskView;
 }
 
 -(void) onActive:(UIApplication *)application{

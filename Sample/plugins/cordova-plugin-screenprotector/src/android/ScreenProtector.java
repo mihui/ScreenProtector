@@ -1,35 +1,28 @@
 /**
  * SecureScreen Plugin
  */
-package mihui.net.ScreenProtector;
+package mihui.net;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import android.app.Activity;
 import android.view.WindowManager;
-import android.view.WindowManager.LayoutParams;
+import android.webkit.ValueCallback;
+import android.webkit.WebView;
+
 /**
  * @author mihui
  *
  */
 public class ScreenProtector extends CordovaPlugin {
-	final static String TAG = ScreenProtector.class.getSimpleName();
-	private static CordovaWebView _webView = null;
-
-	public static CordovaWebView getWebView(){
-		return _webView;
-	}
-
 	@Override
 	public void initialize(CordovaInterface cordova, final CordovaWebView webView) {
 		super.initialize(cordova, webView);
-        _webView = webView;
         initializeWithActivity(this.cordova.getActivity());
 	}
 
@@ -39,5 +32,29 @@ public class ScreenProtector extends CordovaPlugin {
 
     public static void initializeWithActivity(Activity activity) {
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+    }
+
+    public static void onPause(final CordovaWebView _webView){
+        if(_webView != null){
+            final String jsString = "cordova.fireWindowEvent('protector.pause');";
+            new Thread(new Runnable(){
+                @Override
+                public void run() {
+                    _webView.loadUrl("javascript:"+jsString);
+                }
+            });
+        }
+    }
+
+    public static void onResume(final CordovaWebView _webView){
+        if(_webView != null){
+            final String jsString = "cordova.fireWindowEvent('protector.resume');";
+            new Thread(new Runnable(){
+                @Override
+                public void run() {
+                    _webView.loadUrl("javascript:"+jsString);
+                }
+            });
+        }
     }
 }

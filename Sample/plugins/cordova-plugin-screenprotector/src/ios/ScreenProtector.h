@@ -8,7 +8,7 @@
 
 #import <Cordova/CDVPlugin.h>
 #define ENABLE_PRINT
-#define VIEW_TAG 20160518
+#define VIEW_TAG 20160519
 
 static inline void PRINT(NSString *format, ...);
 static inline void PRINT(NSString *format, ...)  {
@@ -25,6 +25,10 @@ static inline void PRINT(NSString *format, ...)  {
 }
 
 @interface ScreenProtector : CDVPlugin
+@property UIColor* bgColor;
 
++ (ScreenProtector*) getInstance;
++ (BOOL) isOSVersion:(int) version;
+- (UIView*) protect;
 @end
 
