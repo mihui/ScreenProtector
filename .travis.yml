@@ -5,10 +5,8 @@ branches:
   only:
     - master
 env:
-- CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=http://services.gradle.org/distributions/gradle-2.10-all.zip
-- BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
+  global:
+  - BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
 
 script:
-# - export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=http://services.gradle.org/distributions/gradle-2.10-all.zip
-# - export BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
 - xcodebuild clean build test -project $BUILD_XCODE_PROJECT_PATH -scheme SampleTests -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' -enableCodeCoverage YES | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|CompileSwift|Test|Build|===)'
