@@ -42,6 +42,8 @@
     XCTAssertTrue([[[ScreenProtector getInstance] protect] isKindOfClass:[UIVisualEffectView class]]);
     [[ScreenProtector getInstance] setBgColor:[UIColor blackColor]];
     XCTAssertTrue([[[ScreenProtector getInstance] protect] isKindOfClass:[UIView class]]);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationWillResignActiveNotification object:nil];
     [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:@"http://mihui.net"]];
 }
 
