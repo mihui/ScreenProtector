@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-screenprotector",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-screenprotector",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "Cordova Screen Protector Plugin",
+  "repository": "https://github.com/mihui/ScreenProtector.git",
+  "issue": "https://github.com/mihui/ScreenProtector/issues",
+  "keywords": [
+    "secure",
+    "screen",
+    "protector",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+  ],
+  "author": "Mihui",
+  "license": "Apache 2.0"
+}

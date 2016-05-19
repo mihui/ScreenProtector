@@ -17,10 +17,12 @@
        under the License.
  */
 
-package com.hunhe.screenprotector.sample;
+package mihui.net.screenprotector;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+
+import mihui.net.ScreenProtector;
 
 public class MainActivity extends CordovaActivity
 {
@@ -30,5 +32,19 @@ public class MainActivity extends CordovaActivity
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
+
+        ScreenProtector.initializeWithActivity(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ScreenProtector.onPause(appView);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ScreenProtector.onResume(appView);
     }
 }

@@ -7,8 +7,8 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.hunhe.screenprotector.sample"
+        "cordova-plugin-screenprotector": {
+            "PACKAGE_NAME": "mihui.net.screenprotector"
         }
     },
     "dependent_plugins": {}

@@ -1,8 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hunhe.screenprotector.sample" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="mihui.net.screenprotector" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="ScreenProtector">
+        <param name="android-package" value="mihui.net.ScreenProtector" />
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
