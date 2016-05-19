@@ -5,9 +5,8 @@ branches:
   only:
     - master
 env:
-	global:
-		- CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=http://services.gradle.org/distributions/gradle-2.10-all.zip
-		- BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
+- CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=http://services.gradle.org/distributions/gradle-2.10-all.zip
+- BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
 
 script:
 # - export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=http://services.gradle.org/distributions/gradle-2.10-all.zip
