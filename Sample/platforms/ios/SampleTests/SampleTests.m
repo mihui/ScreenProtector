@@ -31,7 +31,6 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     XCTAssertNotNil([ScreenProtector getInstance]);
-    XCTAssertTrue([[ScreenProtector getInstance] isKindOfClass: [CDVPlugin class]]);
 }
 
 - (void)testOSVersion{

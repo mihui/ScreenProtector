@@ -8,6 +8,6 @@ env:
   global:
   - BUILD_XCODE_PROJECT_PATH=Sample/platforms/ios/Sample.xcodeproj
 script:
-- xcodebuild clean build test -project $BUILD_XCODE_PROJECT_PATH -scheme SampleTests GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' -enableCodeCoverage YES | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|CompileSwift|Test|Build|===)'
+- xcodebuild clean build test -project $BUILD_XCODE_PROJECT_PATH -scheme SampleTests -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' -enableCodeCoverage YES | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|CompileSwift|Test|Build|===)'
 after_success:
   - bash <(curl -s https://codecov.io/bash)
