@@ -11,3 +11,5 @@ script:
 - xcodebuild clean build test -project $BUILD_XCODE_PROJECT_PATH -scheme SampleTests -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' -enableCodeCoverage YES | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|CompileSwift|Test|Build|===)'
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+notifications:
+  slack: gbsinnovationcenter:fM8v9pXsKuzxMGWm2Vj0rvV4
