@@ -6,6 +6,14 @@
 
 Secure your screen while it is being switched from foreground to background, display a mask on Android Overview Screen and iOS multi-tasking screen (task switcher)
 
+### Sample screenshots
+Normal screen
+![simulator screen shot - iphone 8 plus - 2018-06-07 at 13 17 19](https://user-images.githubusercontent.com/1511528/41079636-310cd6e2-6a55-11e8-9f2e-96cff1c04743.png)
+
+Protected screen
+![simulator screen shot - iphone 8 plus - 2018-06-07 at 13 17 02](https://user-images.githubusercontent.com/1511528/41079635-30ccf6a8-6a55-11e8-856c-6b84641f71c7.png)
+
+
 ### Notice:
 - This ScreenProtector Plugin will not have any JavaScript side invoking APIs yet, it only produces JavaScript events
 - For Android, the implementation is quite simple and straightforward, and it will prevent user from taking screenshots
