@@ -1,29 +1,18 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-screen-protector": {
+      "PACKAGE_NAME": "mihui.net.screenprotector"
     },
-    "config_munge": {
-        "files": {
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"ScreenProtector\"><param name=\"ios-package\" onload=\"true\" value=\"ScreenProtector\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            }
-        }
-    },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "mihui.net.screenprotector"
-        },
-        "cordova-plugin-screenprotector": {
-            "PACKAGE_NAME": "mihui.net.screenprotector"
-        }
-    },
-    "dependent_plugins": {}
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "mihui.net.screenprotector"
+    }
+  },
+  "dependent_plugins": {}
 }

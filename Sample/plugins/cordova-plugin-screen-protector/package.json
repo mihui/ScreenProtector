@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/mihui/cordova-plugin-screen-protector.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/mihui/cordova-plugin-screen-protector.git",
+        "spec": "git+https://github.com/mihui/cordova-plugin-screen-protector.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:mihui/cordova-plugin-screen-protector.git",
+          "sshUrl": "git+ssh://git@github.com/mihui/cordova-plugin-screen-protector.git",
+          "httpsUrl": "git+https://github.com/mihui/cordova-plugin-screen-protector.git",
+          "gitUrl": "git://github.com/mihui/cordova-plugin-screen-protector.git",
+          "shortcut": "github:mihui/cordova-plugin-screen-protector",
+          "directUrl": "https://raw.githubusercontent.com/mihui/cordova-plugin-screen-protector/master/package.json"
+        }
+      },
+      "/Users/mihui/Documents/Projects/CognitiveBuild/ScreenProtector/Sample"
+    ]
+  ],
+  "_from": "git+https://github.com/mihui/cordova-plugin-screen-protector.git",
+  "_id": "cordova-plugin-screen-protector@1.0.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-screen-protector",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/mihui/cordova-plugin-screen-protector.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/mihui/cordova-plugin-screen-protector.git",
+    "spec": "git+https://github.com/mihui/cordova-plugin-screen-protector.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:mihui/cordova-plugin-screen-protector.git",
+      "sshUrl": "git+ssh://git@github.com/mihui/cordova-plugin-screen-protector.git",
+      "httpsUrl": "git+https://github.com/mihui/cordova-plugin-screen-protector.git",
+      "gitUrl": "git://github.com/mihui/cordova-plugin-screen-protector.git",
+      "shortcut": "github:mihui/cordova-plugin-screen-protector",
+      "directUrl": "https://raw.githubusercontent.com/mihui/cordova-plugin-screen-protector/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/mihui/cordova-plugin-screen-protector.git#76c7f14674faf28eca71d1e3861e7055d31ebab0",
+  "_shasum": "d36ed46eb099a38be377c72712dd8887693d7965",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/mihui/cordova-plugin-screen-protector.git",
+  "_where": "/Users/mihui/Documents/Projects/CognitiveBuild/ScreenProtector/Sample",
+  "author": {
+    "name": "Mihui"
+  },
+  "bugs": {
+    "url": "https://github.com/mihui/cordova-plugin-screen-protector/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-screen-protector",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova Screen Protector Plugin",
+  "devDependencies": {},
+  "gitHead": "76c7f14674faf28eca71d1e3861e7055d31ebab0",
+  "homepage": "https://github.com/mihui/cordova-plugin-screen-protector#readme",
+  "issue": "https://github.com/mihui/cordova-plugin-screen-protector/issues",
+  "keywords": [
+    "secure",
+    "screen",
+    "protector",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-screen-protector",
+  "optionalDependencies": {},
+  "readme": "# Screen Protector\n[![Build Status](https://travis-ci.org/mihui/ScreenProtector.svg?branch=master)](https://travis-ci.org/mihui/ScreenProtector)\n[![codecov](https://codecov.io/gh/mihui/ScreenProtector/branch/master/graph/badge.svg)](https://codecov.io/gh/mihui/ScreenProtector)\n[![GitHub issues](https://img.shields.io/github/issues/mihui/ScreenProtector.svg)](https://github.com/mihui/ScreenProtector/issues)\n[![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/mihui/ScreenProtector/master/LICENSE)\n\nSecure your screen while it is being switched from foreground to background, display a mask on Android Overview Screen and iOS multi-tasking screen (task switcher)\n\n\n# Installation\n\nTo install the Screen Protector Plugin in your Cordova Project, run in terminal:\n```shell\ncordova plugin add https://github.com/mihui/cordova-plugin-screen-protector.git\n```\n\n### Notice:\n- This ScreenProtector Plugin will not have any JavaScript side invoking APIs yet, it only produces JavaScript events\n- For Android, the implementation is quite simple and straightforward, and it will prevent user from taking screenshots\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihui/cordova-plugin-screen-protector.git"
+  },
+  "version": "1.0.0"
+}

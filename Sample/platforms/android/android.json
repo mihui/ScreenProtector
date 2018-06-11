@@ -9,11 +9,11 @@
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"ScreenProtector\"><param name=\"android-package\" value=\"mihui.net.ScreenProtector\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"ScreenProtector\"><param name=\"android-package\" value=\"mihui.net.ScreenProtector\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             }
           ]
@@ -22,27 +22,27 @@
     }
   },
   "installed_plugins": {
-    "cordova-plugin-screenprotector": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "mihui.net.screenprotector"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-screen-protector": {
       "PACKAGE_NAME": "mihui.net.screenprotector"
     }
   },
   "dependent_plugins": {},
   "modules": [
     {
-      "id": "cordova-plugin-screenprotector.screenprotector",
-      "file": "plugins/cordova-plugin-screenprotector/www/android/screenprotector.js",
-      "pluginId": "cordova-plugin-screenprotector",
+      "id": "cordova-plugin-screen-protector.screen-protector",
+      "file": "plugins/cordova-plugin-screen-protector/www/android/screen-protector.js",
+      "pluginId": "cordova-plugin-screen-protector",
       "clobbers": [
-        "cordova.plugins.screenProtector"
+        "cordova.plugins.screen.protector"
       ],
       "runs": true
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-screenprotector": "1.0.0",
-    "cordova-plugin-whitelist": "1.2.2"
+    "cordova-plugin-whitelist": "1.2.2",
+    "cordova-plugin-screen-protector": "1.0.0"
   }
 }

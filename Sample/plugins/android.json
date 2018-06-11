@@ -7,10 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-screenprotector": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "mihui.net.screenprotector"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-screen-protector": {
       "PACKAGE_NAME": "mihui.net.screenprotector"
     }
   },
