@@ -1,0 +1,13 @@
+{
+  "name": "mihui.net.screenprotector",
+  "version": "0.0.1",
+  "displayName": "Sample",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0"
+  }
+}

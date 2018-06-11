@@ -24,8 +24,8 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    
     <feature name="ScreenProtector">
-        <param name="ios-package" value="ScreenProtector" onload="true" />
+        <param name="ios-package" onload="true" value="ScreenProtector" />
     </feature>
+    <engine name="android" spec="~7.0.0" />
 </widget>
